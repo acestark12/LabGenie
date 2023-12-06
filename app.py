@@ -7,7 +7,7 @@ import os
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 st.set_page_config(page_title="Chat with your own report", page_icon=":books:")
 
@@ -32,7 +32,7 @@ def get_keywords(pdf_doc):
     return keywords
 
 def main():
-    load_dotenv()
+    #load_dotenv()
     OPENAI_API_KEY=os.env.get('OPENAI_API_KEY')
     chat=ChatOpenAI(openai_api_key=OPENAI_API_KEY)
 
