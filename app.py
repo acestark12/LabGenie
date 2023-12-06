@@ -33,7 +33,8 @@ def get_keywords(pdf_doc):
 
 def main():
     load_dotenv()
-    os.environ['OPENAI_API_KEY']=os.getenv('OPENAI_API_KEY')
+    OPENAI_API_KEY=os.env.get('OPENAI_API_KEY')
+    chat=ChatOpenAI(openai_api_key=OPENAI_API_KEY)
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history=[
@@ -89,7 +90,6 @@ def main():
 
 if __name__ == "__main__":
        
-    os.environ['OPENAI_API_KEY']='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'
-    chat = ChatOpenAI()
+    
     
     main() 
