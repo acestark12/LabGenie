@@ -86,7 +86,8 @@ def main():
         st.session_state.previous_messages.append({"role":"assistant","content":response})
 
 if __name__ == "__main__":
-    nltk.download()
+    nltk.download('punkt')
+    nltk.download('stopwords')
     os.environ['OPENAI_API_KEY']=st.secrets['OPENAI_API_KEY']
     # api_key=os.environ['OPENAI_API_KEY']
     chat=ChatOpenAI()    
