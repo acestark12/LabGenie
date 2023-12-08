@@ -9,7 +9,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 #from dotenv import load_dotenv
 
-st.set_page_config(page_title="Chat with your own report", page_icon=":books:")
+st.set_page_config(page_title="Chat with LabGenie", page_icon=":genie:")
 
 def get_answer_from_gpt(question,messages):
     messages.append(HumanMessage(content=question))
