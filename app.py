@@ -32,10 +32,7 @@ def get_keywords(pdf_doc):
     return keywords
 
 def main():
-    #load_dotenv()
-    OPENAI_API_KEY=os.env.get('OPENAI_API_KEY')
-    chat=ChatOpenAI(openai_api_key=OPENAI_API_KEY)
-
+    load_dotenv()
     if "chat_history" not in st.session_state:
         st.session_state.chat_history=[
         SystemMessage(content="You're a helpful assistant that describes health realted terms in short, its healthy level in body and tips to keep it balanced in body."),
@@ -90,6 +87,6 @@ def main():
 
 if __name__ == "__main__":
        
-    
-    
+    os.environ['OPENAI_API_KEY']=os.getenv('OPENAI_API_KEY')
+    chat=ChatOpenAI()    
     main() 
