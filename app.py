@@ -87,6 +87,6 @@ def main():
 
 if __name__ == "__main__":
        
-    os.environ['OPENAI_API_KEY']='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'
+    #os.environ['OPENAI_API_KEY']='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'
     chat=ChatOpenAI()    
     main() 
