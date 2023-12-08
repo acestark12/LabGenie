@@ -1,5 +1,5 @@
 import streamlit as st
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 import nltk
 from nltk.corpus import stopwords 
