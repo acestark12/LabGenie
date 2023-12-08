@@ -17,7 +17,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Run Python script
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
